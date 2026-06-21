@@ -1,0 +1,19 @@
+DE AICI VEI LUA O CHIEIE API https://console.groq.com/
+INLOCUIESTE LA WI-FI SSID SI PAROLA
+Pentru ca proiectul tău să funcționeze corect pe placa ESP32-2432S028 (cunoscută și ca "Cheap Yellow Display" sau CYD), ai nevoie de următoarele biblioteci instalate în Arduino IDE.
+
+1. Bibliotecile necesare (Managerul de biblioteci)
+Mergi la Sketch -> Include Library -> Manage Libraries... și instalează exact următoarele versiuni (sau cele mai recente dacă sunt compatibile):
+
+TFT_eSPI (de Bodmer) - Esențială pentru controlul display-ului.
+
+XPT2046_Touchscreen (de Paul Stoffregen) - Esențială pentru citirea coordonatelor touch.
+
+ArduinoJson (de Benoit Blanchon) - Versiunea 6.x sau 7.x (recomandat 7.x pentru performanță).
+
+2. Configurația critică pentru TFT_eSPI (User_Setup.h)
+Foarte important: Biblioteca TFT_eSPI nu va funcționa "din cutie" pentru acest display. Trebuie să editezi fișierul User_Setup.h din folderul bibliotecii (C:\Users\NumeleTau\Documents\Arduino\libraries\TFT_eSPI).
+
+Înlocuiește conținutul fișierului User_Setup.h cu setările specifice pentru ESP32-2432S028 CARE O SA IL GASESTI IN ACEST DRIVE LA SETUP:
+
+C++
